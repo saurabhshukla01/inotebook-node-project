@@ -1,0 +1,77 @@
+first create react project in mern >>
+
+# npx create-react-app inotebook
+
++++++++++++++++++++++++++++++++++++++++
+
+goto dir >>
+
+cd inotebook
+
++++++++++++++++++++++++++++++++++++++++
+
+create another project backend folder >>>
+
+# cd backend
+
+run some command >>>  npm init
+
+# ask some question >>  given some reply 
+
+Press ^C at any time to quit.
+package name: (backend) inotebook-backend
+version: (1.0.0)
+description: your notebook on the cloud
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+
+after enter >>>>
+
+About to write to C:\React-learning\inotebook\backend\package.json:
+
+{
+  "name": "inotebook-backend",
+  "version": "1.0.0",
+  "description": "your notebook on the cloud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes) yes
+
+complete initizle ...
+
+if you intizle this file its create package.json file ..
+
++++++++++++++++++++++++++++++++++++++++
+
+after package install then we can use or install apps according to you need ..
+
+you can check mongoose docs >>>
+
+links >> https://mongoosejs.com/docs/
+
+
+install express via npm  >>>
+
+# npm i express
+
+# npm i mongoose
+
+create index.js file inside backend folder >>>
+
+
+
+
+
+
+
