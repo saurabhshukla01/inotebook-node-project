@@ -21,4 +21,6 @@ const UserSchema = new Schema({
     },
 });
 
-module.exports = mongoose.model('user' , UserSchema);
+const User = mongoose.model('user' , UserSchema);
+// User.createIndexes();  // its create all indexes use this code ..  ( now comment this for this unique email we are right some login in authentication file )
+module.exports = User;

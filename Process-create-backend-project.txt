@@ -253,9 +253,37 @@ router.post('/', [
 
 module.exports = router
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 now its working ...
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+now need to we need to fix unique email store in db >>
+
+create index in model Schema update some code in User.js file >>
+
+const User = mongoose.model('user' , UserSchema);
+User.createIndexes();  // its create all indexes use this code ..
+module.exports = User;
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+update some code in authentication.js file to show error what is comming >>>
+
+update some code while create user >>>
+
+	User.create({
+		name:req.body.name,
+			email:req.body.email,
+			password:req.body.password,
+		}).then(user => res.json(user))
+		.catch(err=> {console.log(err)
+			res.json({error:"Please enter a unique value for email", message:err.message})
+	});
+	
+use res.json error get message which you get , and custom message also get..
+	
+add catch session & error show which you got ..
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
