@@ -1,0 +1,60 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "NodeJsAPIs",
+    "collectionId": "97cade1c-7009-47a3-bcdb-b630c5bbdf9e",
+    "dateExported": "2024-09-01T10:42:14.712Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "69cbeda0-3b69-414b-9cc5-59dedb62c772",
+            "name": "AuthAPIs",
+            "containerId": "",
+            "created": "2024-09-01T08:07:04.536Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "0e08effe-c387-4c7a-a89c-f6d933f5d9e4",
+            "name": "Users",
+            "containerId": "",
+            "created": "2024-09-01T08:07:21.665Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "51ddbbdb-fa36-4906-88c7-6aeedaa0781d",
+            "colId": "97cade1c-7009-47a3-bcdb-b630c5bbdf9e",
+            "containerId": "0e08effe-c387-4c7a-a89c-f6d933f5d9e4",
+            "name": "Create Users",
+            "url": "http://127.0.0.1:4000/api/auth/create-user",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-09-01T08:07:33.403Z",
+            "modified": "2024-09-01T09:06:48.897Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Vivek Shukla\",\n  \"email\":\"shukla.vivek@gmail.com\",\n  \"password\":\"123456\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c6d61f68-b278-4489-8bb6-0c7cb943c15d",
+            "colId": "97cade1c-7009-47a3-bcdb-b630c5bbdf9e",
+            "containerId": "0e08effe-c387-4c7a-a89c-f6d933f5d9e4",
+            "name": "User Login with Credentials",
+            "url": "http://127.0.0.1:4000/api/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-09-01T10:21:54.399Z",
+            "modified": "2024-09-01T10:37:10.047Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"suresh.k@gmail.com\",\n  \"password\":\"123456\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "debr7kDqXIxX3xnxmFV7ITtz2Ff5zQum9kSxJckQR8gDjxVZRkuPqPRj7AS3-8MjQ2N94KJyUCvF4kXp-7XZFA"
+}

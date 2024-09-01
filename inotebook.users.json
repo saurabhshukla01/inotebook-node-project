@@ -1,0 +1,144 @@
+[{
+  "_id": {
+    "$oid": "66c9fa8c89d94b6cfb70439b"
+  },
+  "name": "Saurabh",
+  "email": "saurabh@gmail.com",
+  "password": "123456",
+  "date": {
+    "$date": "2024-08-24T15:21:48.438Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c9fa9d89d94b6cfb70439d"
+  },
+  "name": "Vijay",
+  "email": "vijay@gmail.com",
+  "password": "123456",
+  "date": {
+    "$date": "2024-08-24T15:22:05.359Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c9fb529d0b10ee5e3a12c4"
+  },
+  "name": "Mukesh",
+  "email": "mukesh@gmail.com",
+  "password": "123456",
+  "date": {
+    "$date": "2024-08-24T15:25:06.613Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c9fb809d0b10ee5e3a12c6"
+  },
+  "name": "Ashish",
+  "email": "ashish@gmail.com",
+  "password": "123456",
+  "date": {
+    "$date": "2024-08-24T15:25:52.336Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca091b17cc28d305fafb1a"
+  },
+  "name": "Rishabh",
+  "email": "rishabh@gmail.com",
+  "password": "123456",
+  "date": {
+    "$date": "2024-08-24T16:23:55.461Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ca095111cae20cb816da45"
+  },
+  "name": "Suresh",
+  "email": "suresh@gmail.com",
+  "password": "123456",
+  "date": {
+    "$date": "2024-08-24T16:24:49.978Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cd6601c1fe845b9d0443c1"
+  },
+  "name": "Suresh Mohan",
+  "email": "suresh.m@gmail.com",
+  "password": "123456",
+  "date": {
+    "$date": "2024-08-27T05:37:05.777Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cd876c84d86e0961246cfb"
+  },
+  "name": "Suresh Patil",
+  "email": "suresh.p@gmail.com",
+  "password": "123456",
+  "date": {
+    "$date": "2024-08-27T07:59:40.345Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cd8ab4218a63d1481c1f19"
+  },
+  "name": "Suresh Savita",
+  "email": "suresh.s@gmail.com",
+  "password": "123456",
+  "date": {
+    "$date": "2024-08-27T08:13:40.169Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d420f2f7561b64849410cb"
+  },
+  "name": "Vivek Kumar",
+  "email": "kumar.vivek@gmail.com",
+  "password": "123456",
+  "date": {
+    "$date": "2024-09-01T08:08:18.998Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d42eaec16298656183769c"
+  },
+  "name": "Vivek Shukla",
+  "email": "shukla.vivek@gmail.com",
+  "password": "$2a$10$164xw1t9Dn7p7uKDef5cQu5ZLPv7wl7rmTjk/2GqiiVERzd1KOpve",
+  "date": {
+    "$date": "2024-09-01T09:06:54.320Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4385b4750c41d6155afb5"
+  },
+  "name": "Suresh Kumar",
+  "email": "suresh.k@gmail.com",
+  "password": "$2a$10$amnaKOBhAJsFQRSRL0M1zemF/tQd.tv/ff7thI6i4ElKvGe5htz0y",
+  "date": {
+    "$date": "2024-09-01T09:48:11.114Z"
+  },
+  "__v": 0
+}]

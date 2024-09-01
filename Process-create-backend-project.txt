@@ -385,7 +385,29 @@ Install package >>>
 
 for more knowledge link is >>   https://jwt.io/
 
+check with this code >>>
 
+import some lines >>>
+
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = 'forAuthenticationUserLoggedIn';
+
+const data = {
+    user : {
+        id : user.id
+        }
+    }
+const authToken = jwt.sign(data,JWT_SECRET);  // this is sync method not call to async Or await function 
+// console.log(authToken);
+res.json({authToken});  // after user create send auth token in api while create user successfully.
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+		
 
 
 
