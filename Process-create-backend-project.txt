@@ -1,3 +1,16 @@
+Required Applications >>>
+####################################################
+# Node Install  ( for dependency )
+# mongodb compass  ( database )
+# express
+# mongoose
+# nodemon
+# run server command >>>  
+node index.js or node server.js  ( which is your main file in node project you set initizle )
+if you have nodemon  ( its run automatically or getting error its break if any thing is right then run server automatically ).
+nodemon index.js or nodemon server.js 
+####################################################
+
 first create react project in mern >>
 
 # npx create-react-app inotebook
@@ -329,3 +342,52 @@ router.post('/create-user', [
 module.exports = router
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Understanding Password Hashing, Salt & Pepper in NodeJs >>>
+
+for this install one package >>>
+
+# npm install bcryptjs   ( this is bcryptjs package for using password secuirty )
+
+
+
+update code in authentication file >>>
+
+import one line for package >>>
+
+const bcrypt = require('bcryptjs');
+
+// creating salt using function to secure the password ..
+const salt = await bcrypt.genSalt(10);
+// change password variable in hashing , salt , pepper  etc 
+secPass = await bcrypt.hash(req.body.password,salt);
+// create a new user
+user = await User.create({
+name:req.body.name,
+email:req.body.email,
+password:secPass,
+})
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+when user logged in or login then send token its based on like that >>
+
+# JWT NodeJs
+# Session Token 
+
+now we are use JWT NodeJs ( Json web token )
+
+-------------------------------------------------------
+
+Install package >>>  
+
+# npm i jsonwebtoken
+
+for more knowledge link is >>   https://jwt.io/
+
+
+
+
+
+
+

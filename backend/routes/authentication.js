@@ -2,6 +2,9 @@ const express = require('express');
 const User = require('../models/User'); 
 const { body, validationResult } = require('express-validator');
 const router = express.Router();
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = 'forAuthenticationUserLoggedIn';
 
 
 // Create a User using: POST "/api/auth/create-user" .No login required ( Doesn't require Auth )
@@ -21,13 +24,24 @@ router.post('/create-user', [
         if(user){
             return res.status(400).json({error:"Sorry a user with this email already exists."})
         }
+        // creating salt using function to secure the password ..
+        const salt = await bcrypt.genSalt(10);
+        // change password variable in hashing , salt , pepper  etc 
+        secPass = await bcrypt.hash(req.body.password,salt);
         // create a new user
         user = await User.create({
             name:req.body.name,
             email:req.body.email,
-            password:req.body.password,
+            password:secPass,
         })
-        res.json(user);
+        const data = {
+            user : {
+                id : user.id
+            }
+        }
+        const authToken = jwt.sign(data,JWT_SECRET);  // this is sync method not call to async Or await function 
+        // console.log(authToken);
+        res.json({authToken});  // after user create send auth token in api while create user successfully.
         // catch errors
     }catch (error) {
         console.error(error.message);
