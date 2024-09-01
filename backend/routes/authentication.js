@@ -3,7 +3,8 @@ const User = require('../models/User');
 const { body, validationResult } = require('express-validator');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+var jwt = require('jsonwebtoken');
+var fetchUser = require('../middlewares/fetchUser');
 const JWT_SECRET = 'forAuthenticationUserLoggedIn';
 
 
@@ -85,5 +86,22 @@ router.post('/login', [
         res.status(500).send("Internal Server Error")
     }
 });
+
+// ROUTE 3: Get LoggedIn User Details using: POST "/api/auth/get-user" .Login required ( Does require Auth )
+router.post('/get-user', 
+    fetchUser,
+    async (req,res) => {
+        try{
+            userId = req.user.id;
+            const user = await User.findById(userId).select("-password");    // "-password"  means ignore password fetch all fields
+            // send user response in api while get correct header "auth-token"
+            res.send(user);
+        // catch errors
+        }catch (error) {
+            console.error(error.message);
+            res.status(500).send("Internal Server Error")
+        }
+    }
+);
 
 module.exports = router

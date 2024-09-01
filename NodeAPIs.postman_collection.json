@@ -409,6 +409,192 @@
 							"body": "{\n    \"error\": \"Please try to login with correct Credentials.\"\n}"
 						}
 					]
+				},
+				{
+					"name": "Get User Data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTE4OTU3NH0.vfQatrP5I7GDkS7VlhmKgRgjW7XmLDyggZRcnL6eHDQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/auth/get-user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"get-user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User Data Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTE4OTU3NH0.vfQatrP5I7GDkS7VlhmKgRgjW7XmLDyggZRcnL6eHDQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/auth/get-user",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"auth",
+										"get-user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "127"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7f-SAh2nNS6HRAVvWGT2QRgt4Np15c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Sep 2024 11:21:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66d4385b4750c41d6155afb5\",\n    \"name\": \"Suresh Kumar\",\n    \"email\": \"suresh.k@gmail.com\",\n    \"date\": \"2024-09-01T09:48:11.114Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "Get User Data Get Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "auth-token",
+										"value": "tyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTE4OTU3NH0.vfQatrP5I7GDkS7VlhmKgRgjW7XmLDyggZRcnL6eHDQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/auth/get-user",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"auth",
+										"get-user"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-f9h7GhW5yjfJv9hGaC8RZDtRl48\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Sep 2024 11:28:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Please authenticate using a valid token\"\n}"
+						}
+					]
 				}
 			]
 		}

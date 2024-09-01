@@ -405,9 +405,68 @@ res.json({authToken});  // after user create send auth token in api while create
 
 ++++++++++++++++++++++++++++++++++++++++++++
 
+update file based on git code ( login & get user details )..
 
+get User details based on logged in user >>>
+
+---------------------------------------------------------
+
+need to create middlewares  in node Js >>>
+
+Creating a middleware to decode user from a JWT  >>>>
+
+middlewares/fetchUser.js >>
+
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = 'forAuthenticationUserLoggedIn';
+
+const fetchUser = (req, res, next) => {
+    // Get the user from the jwt token and add id to request object
+    const token = req.header('auth-token');
+    if(!token){
+        res.status(401).send({error:"Please authenticate using a valid token"});
+    }
+    try{
+        const data = jwt.verify(token,JWT_SECRET);
+        req.user = data.user;
+        next();
+    }catch(error){
+        console.error(error.message);
+        res.status(401).send({error:"Please authenticate using a valid token"});
+    }
+} 
+module.exports = fetchUser;
+
+
+---------------------------------------------------------
+
+
+authentication.js update code >>>
+
+// ROUTE 3: Get LoggedIn User Details using: POST "/api/auth/get-user" .Login required ( Does require Auth )
+router.post('/get-user', 
+    fetchUser,
+    async (req,res) => {
+        try{
+            userId = req.user.id;
+            const user = await User.findById(userId).select("-password");    // "-password"  means ignore password fetch all fields
+            // send user response in api while get correct header "auth-token"
+            res.send(user);
+        // catch errors
+        }catch (error) {
+            console.error(error.message);
+            res.status(500).send("Internal Server Error")
+        }
+    }
+);
+
+now pass in api via postman in get-user
+send auth-token in header while hit the request ( before logged in and get the auth-token and pass 
+in the get-user request so its send the data which user is logged in.
 
 		
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 
 
