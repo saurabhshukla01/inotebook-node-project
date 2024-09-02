@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "NodeJsAPIs",
     "collectionId": "97cade1c-7009-47a3-bcdb-b630c5bbdf9e",
-    "dateExported": "2024-09-02T09:45:36.258Z",
+    "dateExported": "2024-09-02T12:05:05.375Z",
     "version": "1.2",
     "folders": [
         {
@@ -81,7 +81,7 @@
             "method": "POST",
             "sortNum": 40000,
             "created": "2024-09-02T09:34:08.502Z",
-            "modified": "2024-09-02T09:35:28.450Z",
+            "modified": "2024-09-02T12:03:43.489Z",
             "headers": [
                 {
                     "name": "auth-token",
@@ -90,7 +90,7 @@
             ],
             "body": {
                 "type": "json",
-                "raw": "{\r\n    \"title\":\"React ES6 Destructuring\",\r\n    \"description\":\"Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these.\",\r\n    \"tag\":\"Destructuring\"\r\n}",
+                "raw": "{\n    \"title\":\"React ES6 Destructuring\",\n    \"description\":\"Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these.\",\n    \"tag\":\"Destructuring\"\n}",
                 "form": []
             }
         },
@@ -110,7 +110,46 @@
                     "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI2OTY5OX0.6bS42Vc9oqmDhwUfqWPWRKaRwJWxxAdsg1a8zo7DciU"
                 }
             ]
+        },
+        {
+            "_id": "c9b479fa-0388-411f-837c-3d1443aa9179",
+            "colId": "97cade1c-7009-47a3-bcdb-b630c5bbdf9e",
+            "containerId": "2c638fec-f750-4398-8fb4-3ed6095dab64",
+            "name": "Update Notes",
+            "url": "http://127.0.0.1:4000/api/notes/update-notes/66d5846dffdfa5bc426102e4",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-09-02T11:47:49.135Z",
+            "modified": "2024-09-02T11:48:30.381Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI2OTY5OX0.6bS42Vc9oqmDhwUfqWPWRKaRwJWxxAdsg1a8zo7DciU"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"title\": \"Structuring assignment Updated On\",\r\n    \"description\": \"The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects Updated On\",\r\n    \"tag\": \"objects based\"\r\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "535d3484-7aec-48d5-af3e-44d3ba571e3a",
+            "colId": "97cade1c-7009-47a3-bcdb-b630c5bbdf9e",
+            "containerId": "2c638fec-f750-4398-8fb4-3ed6095dab64",
+            "name": "Delete Notes",
+            "url": "http://127.0.0.1:4000/api/notes/delete-notes/66d5a9d2a99e86653414ffff",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-09-02T11:50:35.529Z",
+            "modified": "2024-09-02T12:04:52.372Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI2OTY5OX0.6bS42Vc9oqmDhwUfqWPWRKaRwJWxxAdsg1a8zo7DciU"
+                }
+            ]
         }
     ],
-    "ref": "debr7kDqXIxX3xnxmFV7If4AaVt9NHlRoXdiWQ90Qes_arlOA3qNua69z4KzejFQa9zEMD36d-Br18hMMsH45g"
+    "ref": "debr7kDqXIxX3xnxmFV7IQ2QfF_t_uCaGTPbzDI9xXgTXzkPlSsSteNshzu7FtrX7erbxS2UY345MOicpKyOsg"
 }

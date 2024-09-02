@@ -939,6 +939,384 @@
 							"body": "{\n    \"user\": \"66d4385b4750c41d6155afb5\",\n    \"title\": \"Structuring assignment\",\n    \"description\": \"The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects\",\n    \"tag\": \"objects based\",\n    \"_id\": \"66d5846dffdfa5bc426102e4\",\n    \"date\": \"2024-09-02T09:25:01.977Z\",\n    \"__v\": 0\n}"
 						}
 					]
+				},
+				{
+					"name": "update Notes",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI2ODg4OX0.f_xVvC69fG4SheeT9R_NRpz4DI0phcDoBmq19ujfqIQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Structuring assignment Updated\",\r\n    \"description\": \"The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects Updated\",\r\n    \"tag\": \"objects based\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/notes/update-notes/66d5846dffdfa5bc426102e4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"notes",
+								"update-notes",
+								"66d5846dffdfa5bc426102e4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update Notes Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI2ODg4OX0.f_xVvC69fG4SheeT9R_NRpz4DI0phcDoBmq19ujfqIQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Structuring assignment Updated\",\r\n    \"description\": \"The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects Updated\",\r\n    \"tag\": \"objects based\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/notes/update-notes/66d5846dffdfa5bc426102e4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"notes",
+										"update-notes",
+										"66d5846dffdfa5bc426102e4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "340"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"154-zgBGIDOuh+R4p+slTjXqFnYF2X4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 11:37:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66d5846dffdfa5bc426102e4\",\n    \"user\": \"66d4385b4750c41d6155afb5\",\n    \"title\": \"Structuring assignment Updated\",\n    \"description\": \"The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects Updated\",\n    \"tag\": \"objects based\",\n    \"date\": \"2024-09-02T09:25:01.977Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "update Notes Error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI2ODg4OX0.f_xVvC69fG4SheeT9R_NRpz4DI0phcDoBmq19ujfqIQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Structuring assignment Updated\",\r\n    \"description\": \"The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects Updated\",\r\n    \"tag\": \"objects based\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/notes/update-notes/66d5846dffdfa5bc426102e4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"notes",
+										"update-notes",
+										"66d5846dffdfa5bc426102e4"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15-/6VXivhc2MKdLfIkLcUE47K6aH0\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 11:39:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Internal Server Error"
+						}
+					]
+				},
+				{
+					"name": "delete Notes",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI2ODg4OX0.f_xVvC69fG4SheeT9R_NRpz4DI0phcDoBmq19ujfqIQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/notes/delete-notes/66d5846dffdfa5bc426102e4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"notes",
+								"delete-notes",
+								"66d5846dffdfa5bc426102e4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete Notes with return data",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI2ODg4OX0.f_xVvC69fG4SheeT9R_NRpz4DI0phcDoBmq19ujfqIQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/notes/delete-notes/66d5846dffdfa5bc426102e4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"notes",
+										"delete-notes",
+										"66d5846dffdfa5bc426102e4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "389"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"185-bpnWvaCIiYIOTSzlpv10J4mNQi4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 12:02:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Success\": \"Note has been deleted\",\n    \"note\": {\n        \"_id\": \"66d5846dffdfa5bc426102e4\",\n        \"user\": \"66d4385b4750c41d6155afb5\",\n        \"title\": \"Structuring assignment Updated On\",\n        \"description\": \"The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects Updated On\",\n        \"tag\": \"objects based\",\n        \"date\": \"2024-09-02T09:25:01.977Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "update Notes Not found ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI2ODg4OX0.f_xVvC69fG4SheeT9R_NRpz4DI0phcDoBmq19ujfqIQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/notes/delete-notes/66d5846dffdfa5bc426102e4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"notes",
+										"delete-notes",
+										"66d5846dffdfa5bc426102e4"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "9"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 12:02:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Not Found"
+						}
+					]
 				}
 			]
 		}
