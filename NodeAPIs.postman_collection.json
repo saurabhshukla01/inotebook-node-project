@@ -597,6 +597,350 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "fetch All Notes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI1NzQ5N30.r8UO0No8vVO8Ag54Yweb_aLU0JjqMlZiURwxtupw4z4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/notes/fetch-all-notes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"notes",
+								"fetch-all-notes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "fetch notes error without Login",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/notes/fetch-all-notes",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"notes",
+										"fetch-all-notes"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-f9h7GhW5yjfJv9hGaC8RZDtRl48\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 06:10:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Please authenticate using a valid token\"\n}"
+						},
+						{
+							"name": "fetch All Notes Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI1NzQ5N30.r8UO0No8vVO8Ag54Yweb_aLU0JjqMlZiURwxtupw4z4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/notes/fetch-all-notes",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"notes",
+										"fetch-all-notes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "988"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3dc-/KLaA1OXNHoZ3DCdLpB7OzGtt9w\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 09:27:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"66d5846dffdfa5bc426102e4\",\n        \"user\": \"66d4385b4750c41d6155afb5\",\n        \"title\": \"Structuring assignment\",\n        \"description\": \"The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects\",\n        \"tag\": \"objects based\",\n        \"date\": \"2024-09-02T09:25:01.977Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66d584b5ffdfa5bc426102e6\",\n        \"user\": \"66d4385b4750c41d6155afb5\",\n        \"title\": \"Destructuring assignment\",\n        \"description\": \"The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects\",\n        \"tag\": \"objects assignment\",\n        \"date\": \"2024-09-02T09:26:13.155Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66d584e9ffdfa5bc426102e8\",\n        \"user\": \"66d4385b4750c41d6155afb5\",\n        \"title\": \"React ES6 Destructuring\",\n        \"description\": \"Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these.\",\n        \"tag\": \"Destructuring\",\n        \"date\": \"2024-09-02T09:27:05.860Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "create Notes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI2ODg4OX0.f_xVvC69fG4SheeT9R_NRpz4DI0phcDoBmq19ujfqIQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"React ES6 Destructuring\",\r\n    \"description\":\"Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these.\",\r\n    \"tag\":\"Destructuring\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/notes/create-notes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"notes",
+								"create-notes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Notes while getting error response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI1NzQ5N30.r8UO0No8vVO8Ag54Yweb_aLU0JjqMlZiURwxtupw4z4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Destructuring assignment\",\r\n    \"description\":\"\",\r\n    \"tag\":\"objects\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/notes/create-notes",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"notes",
+										"create-notes"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "129"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"81-pKUujJ7kyzaf+CRN4siNaVbEIS0\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 09:19:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": [\n        {\n            \"type\": \"field\",\n            \"value\": \"\",\n            \"msg\": \"Description must be at least 5 characters\",\n            \"path\": \"description\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Create Notes response with user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZkNDM4NWI0NzUwYzQxZDYxNTVhZmI1In0sImlhdCI6MTcyNTI2ODg4OX0.f_xVvC69fG4SheeT9R_NRpz4DI0phcDoBmq19ujfqIQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Structuring assignment\",\r\n    \"description\":\"The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects\",\r\n    \"tag\":\"objects based\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/notes/create-notes",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"notes",
+										"create-notes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "324"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"144-4atUJ16maucD3F/To24prD3Yi2o\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 09:25:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": \"66d4385b4750c41d6155afb5\",\n    \"title\": \"Structuring assignment\",\n    \"description\": \"The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects\",\n    \"tag\": \"objects based\",\n    \"_id\": \"66d5846dffdfa5bc426102e4\",\n    \"date\": \"2024-09-02T09:25:01.977Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
 		}
 	]
 }
