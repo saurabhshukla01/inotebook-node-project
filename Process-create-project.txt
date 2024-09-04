@@ -1,77 +1,157 @@
+urls :
+
+https://www.npmjs.com/package/concurrently
+
+https://www.npmjs.com/package/jsonwebtoken
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 first create react project in mern >>
 
 # npx create-react-app inotebook
 
-+++++++++++++++++++++++++++++++++++++++
+now install app in react need to install router dom >>>
 
-goto dir >>
+link url >>>    https://www.npmjs.com/package/concurrently
 
-cd inotebook
+# npm i react-router-dom concurrently   ( for react route package )
 
-+++++++++++++++++++++++++++++++++++++++
+if you want to parrel server frontend & backend both simultaneously  ( then use concurrently )
 
-create another project backend folder >>>
+after install this goto react folder open package.json file 
 
-# cd backend
+add script inside the same file >>>
 
-run some command >>>  npm init
+# exp >>
 
-# ask some question >>  given some reply 
+code ...
 
-Press ^C at any time to quit.
-package name: (backend) inotebook-backend
-version: (1.0.0)
-description: your notebook on the cloud
-entry point: (index.js)
-test command:
-git repository:
-keywords:
-author:
-license: (ISC)
+search >>>  scripts  key and add 
 
-after enter >>>>
+# "both": "concurrently  \"npm run start\" \"nodemon backend/index.js\""
 
-About to write to C:\React-learning\inotebook\backend\package.json:
+now need to run # npm run both  ( all server is running based on one command  backend for node & forntend for react ) ..
 
-{
-  "name": "inotebook-backend",
-  "version": "1.0.0",
-  "description": "your notebook on the cloud",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "both": "concurrently  \"npm run start\" \"nodemon backend/index.js\""
   },
-  "author": "",
-  "license": "ISC"
+  
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Install packages >>>
+
+# npm i react-router-dom concurrently
+# npm install react-router-dom@latest
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+Introduction to React Context API   >>>>
+
+react App ==>   state
+				components
+
+sturctures >>>
+
+			App.js
+			
+	shop			Blog			offers
+		
+	clothing						O1
+	Food							O2
+	
+
+####  need to create context api 
+
+first create contextColor file like that and call via useContext ( of using this hooks ).
+
+ex .   useContext(contextColor)
+
+if you want to create AuthContext file to check the user is login or not then you can use AuthContext file via useContext hooks in react applications.
+
+this is use for this useContext file to pass one by one multiple components so its heaktech for me then you create contextColor file like wise then call via useContext hook to easy to pass file inside hooks its easy to debug & solve this issue.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+what is the context ?  >>  holds the all states in same file this is called context.
+
+useContext hook: Using React Context API   >>>
+
+
++++++++++++++++++++++++++++++++++++++++++++++
+
+noteContext.js >>>
+
+import { createContext } from "react";
+
+const noteContext = createContext(); 
+
+export default noteContext;
+
+
+++++++++++++++++++++++++++++++++++++++++++++
+
+import { useState } from "react";
+import NoteContext from "./NoteContext";
+
+const NoteState = (props) => {
+    // create state in NoteState call via useContext api
+    const s1 = {
+        "name":"Saurabh Shukla",
+        "class":"5B",
+    }
+    const [state, setState] = useState(s1);
+    const update = () => {
+        setTimeout(() => {
+            setState({
+                "name": "Rishabh Shukla",
+                "class": "10C"
+            })
+        },1000)
+    }
+    return(
+        // to pass the value using create new useContext hooks pass the value and access is another one
+        <NoteContext.Provider value={{state:state,update:update}}>   
+            {props.children}
+        </NoteContext.Provider>
+    )
 }
 
+export default NoteState;
 
-Is this OK? (yes) yes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-complete initizle ...
+call this useContext in app.js file >>>
 
-if you intizle this file its create package.json file ..
+update index.js file >>>>
 
-+++++++++++++++++++++++++++++++++++++++
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import NoteState from './context/notes/NoteState';
 
-after package install then we can use or install apps according to you need ..
-
-you can check mongoose docs >>>
-
-links >> https://mongoosejs.com/docs/
-
-
-install express via npm  >>>
-
-# npm i express
-
-# npm i mongoose
-
-create index.js file inside backend folder >>>
-
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <NoteState>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+  </NoteState>
+);
 
 
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+useLocation Hook in React  : >>>
 
 
+
+ 
+	
+	
