@@ -11,7 +11,7 @@ const Notes = () => {
       {notes && notes.length > 0 ? (
         notes.map((note, index) => (
           <div key={index} className="card my-3 shadow-sm">
-            return <NoteItem note={note} index={index}/>
+            <NoteItem note={note} index={index}/>
           </div>
         ))
       ) : (
