@@ -150,6 +150,8 @@ root.render(
 
 useLocation Hook in React  : >>>
 
+if i want to active menu then high light same menu using useLocation hooks ..
+
 
 
  

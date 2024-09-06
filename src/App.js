@@ -9,10 +9,12 @@ function App() {
   return (
     <>
       <Navbar />
+      <div className="container py-3">
         <Routes>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/" element={<Home />} />
         </Routes>
+      </div>
     </>
   );
 }
