@@ -1,13 +1,26 @@
 import React from "react";
 
 const NoteItem = (props) => {
-    const {note} = props;
+  const { note } = props;
+  // Parse the date string and create a new Date object
+  const date = new Date(note.date);
+
+  // Format the date in the desired format, e.g., "MM/DD/YYYY"
+  const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
   return (
     <div className="card-body">
       <div className="d-flex justify-content-between align-items-center mb-3">
-        <h5 className="card-title mb-0">
-          <strong className="text-danger">{note.title}</strong>
-        </h5>
+        <div className="d-flex">
+          <h5 className="card-title me-4">
+            <strong className="text-danger">{note.title}</strong>
+          </h5>
+          <span className="me-1 btn btn-sm btn-primary" title="Edit Note">
+            <i className="fa fa-edit"></i>
+          </span>
+          <span className="mx-1 btn btn-sm btn-danger" title="Delete Note">
+            <i className="fa fa-trash"></i>
+          </span>
+        </div>
         <span
           className="badge badge-primary"
           style={{
@@ -28,7 +41,8 @@ const NoteItem = (props) => {
         </small>
       </p>
       <p className="card-text">
-        <small className="text-primary">Last updated at {note.date}</small>
+        {/* Format the date in the desired format, e.g., "MM/DD/YYYY" */}
+        <small className="text-primary">Last updated at {formattedDate}</small>
         {" & "}
         <small className="text-success">Created By {note.user}</small>
       </p>

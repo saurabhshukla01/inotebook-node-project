@@ -41,10 +41,37 @@ const NoteState = (props) => {
         }
       ];
 
-    const [notes,setNotes] = useState(notesInitial)
+    const [notes , setNotes] = useState(notesInitial)
+
+    // add a notes
+
+    const addNote = (title , description , tag) => {
+      // TODO : API CALL
+      const notes = {
+        "_id": "66d586e33fcbded250f87266",
+        "user": "66d4385b4750c41d6155afb5",
+        "title": "React ES6 Destructuring [ADDED]",
+        "description": "Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these [ADDED].",
+        "tag": "Destructuring",
+        "date": "2024-09-02T09:35:31.429Z",
+        "__v": 0
+      };
+      setNotes(notes.push(notes));
+    }
+    // delete a notes
+
+    const deleteNote = () => {
+
+    }
+    // edit a d notes
+
+    const editNote = () => {
+
+    }
+
     return(
         // to pass the value using create new useContext hooks pass the value and access is another one
-        <NoteContext.Provider value={{notes}}>   
+        <NoteContext.Provider value={{notes,addNote,deleteNote,editNote}}>   
             {props.children}
         </NoteContext.Provider>
     )
