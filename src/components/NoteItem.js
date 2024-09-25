@@ -4,7 +4,7 @@ import noteContext from "../context/notes/NoteContext";
 const NoteItem = (props) => {
   const context = useContext(noteContext);
   const { deleteNote } = context;
-  const { note } = props;
+  const { note , updateNote} = props;
   // Parse the date string and create a new Date object
   const date = new Date(note.date);
 
@@ -19,7 +19,7 @@ const NoteItem = (props) => {
           <h5 className="card-title me-4">
             <strong className="text-danger">{note.title}</strong>
           </h5>
-          <span className="me-1 btn btn-sm btn-primary" title="Edit Note">
+          <span className="me-1 btn btn-sm btn-primary" title="Edit Note" onClick={() => {updateNote(note)}}>
             <i className="fa fa-edit"></i>
           </span>
           <span
