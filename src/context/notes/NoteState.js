@@ -47,16 +47,17 @@ const NoteState = (props) => {
 
     const addNote = (title , description , tag) => {
       // TODO : API CALL
-      const notes = {
+      console.log("Adding a new note");
+      const note = {
         "_id": "66d586e33fcbded250f87266",
         "user": "66d4385b4750c41d6155afb5",
-        "title": "React ES6 Destructuring [ADDED]",
-        "description": "Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these [ADDED].",
-        "tag": "Destructuring",
+        "title": title,
+        "description": description,
+        "tag": tag,
         "date": "2024-09-02T09:35:31.429Z",
         "__v": 0
       };
-      setNotes(notes.push(notes));
+      setNotes(notes.concat(note));
     }
     // delete a notes
 

@@ -5,13 +5,16 @@ const AddNote = () => {
   // const { notes } = useContext(noteContext);
   const context = useContext(noteContext);
   const {addNote} = context;
-  const [note,setNote] = useState({"title":"","description":"","tag":""});
+  const [note,setNote] = useState({"title":"","description":"","tag":"default"});
 
-  const handleClick = () => {
+  const handleClick = (e) => {
     console.log("on click function");
+    e.preventDefault();
+    addNote(note.title,note.tag,note.description);
   }
   
-  const onChange = () => {
+  const onChange = (e) => {
+    setNote({...note, [e.target.name]: e.target.value}); 
     console.log("on change input value");
   }
   return (
