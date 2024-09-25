@@ -3,13 +3,15 @@ import noteContext from "../context/notes/NoteContext";
 
 const NoteItem = (props) => {
   const context = useContext(noteContext);
-  const {deleteNote} = context;
+  const { deleteNote } = context;
   const { note } = props;
   // Parse the date string and create a new Date object
   const date = new Date(note.date);
 
   // Format the date in the desired format, e.g., "MM/DD/YYYY"
-  const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+  const formattedDate = `${
+    date.getMonth() + 1
+  }/${date.getDate()}/${date.getFullYear()}`;
   return (
     <div className="card-body">
       <div className="d-flex justify-content-between align-items-center mb-3">
@@ -20,7 +22,13 @@ const NoteItem = (props) => {
           <span className="me-1 btn btn-sm btn-primary" title="Edit Note">
             <i className="fa fa-edit"></i>
           </span>
-          <span className="mx-1 btn btn-sm btn-danger" title="Delete Note" onClick={() => {deleteNote(note._id)}}>
+          <span
+            className="mx-1 btn btn-sm btn-danger"
+            title="Delete Note"
+            onClick={() => {
+              deleteNote(note._id);
+            }}
+          >
             <i className="fa fa-trash"></i>
           </span>
         </div>

@@ -696,6 +696,10 @@ module.exports = router
 
 ++++++++++++++++++++++++++++++++++++++++++
 
+How to fix cors in express node  >>
+
+# npm install cors
+
 
 
 
