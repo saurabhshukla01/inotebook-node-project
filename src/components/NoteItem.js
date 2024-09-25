@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import noteContext from "../context/notes/NoteContext";
 
 const NoteItem = (props) => {
+  const context = useContext(noteContext);
+  const {deleteNote} = context;
   const { note } = props;
   // Parse the date string and create a new Date object
   const date = new Date(note.date);
@@ -17,7 +20,7 @@ const NoteItem = (props) => {
           <span className="me-1 btn btn-sm btn-primary" title="Edit Note">
             <i className="fa fa-edit"></i>
           </span>
-          <span className="mx-1 btn btn-sm btn-danger" title="Delete Note">
+          <span className="mx-1 btn btn-sm btn-danger" title="Delete Note" onClick={() => {deleteNote(note._id)}}>
             <i className="fa fa-trash"></i>
           </span>
         </div>
