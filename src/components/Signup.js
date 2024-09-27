@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const SignUp = (props) => {
     const navigate = useNavigate();
     const host = "http://localhost:4000";
     const [user , setUser] = useState({name:"",email:"",password:"",cpassword:""});
@@ -17,12 +17,13 @@ const SignUp = () => {
             body: JSON.stringify({ name,email,password}),
         });
         const json = await response.json();
-        console.log(json);
         if(json.success){
             // save the user data in user table and redirect to home page 
+            localStorage.setItem('token',json.authToken);
             navigate('/');
+            props.showAlert("Account Created Successfully !!!","success");
         }else{
-            alert("invalid credentials !!!");
+            props.showAlert("Invalid credentials !!!","danger");
         }
     } 
     const onChange = (e) => {
@@ -37,7 +38,7 @@ const SignUp = () => {
             Name
           </label>
           <div className="col-sm-10">
-            <input type="name" className="form-control" id="name" name="name" value={user.name} onChange={onChange} />
+            <input type="name" className="form-control" id="name" name="name" value={user.name} onChange={onChange} required />
           </div>
         </div>
         <div className="row mb-3">
@@ -45,7 +46,7 @@ const SignUp = () => {
             Email
           </label>
           <div className="col-sm-10">
-            <input type="email" className="form-control" id="email" name="email" value={user.email} onChange={onChange} />
+            <input type="email" className="form-control" id="email" name="email" value={user.email} onChange={onChange} required />
           </div>
         </div>
         <div className="row mb-3">

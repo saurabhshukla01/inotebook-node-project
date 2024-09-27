@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import noteContext from "../context/notes/NoteContext";
 import NoteItem from "./NoteItem";
 
-const Notes = () => {
+const Notes = (props) => {
   // const { notes } = useContext(noteContext);
   const ref = useRef(null);
   const refClose = useRef(null);
@@ -26,6 +26,7 @@ const Notes = () => {
   const handleClick = (e) => {
     e.preventDefault();
     editNote(note.id, note.etitle, note.edescription, note.etag);
+    props.showAlert("Updated Notes Successfully !!!","success");
     refClose.current.click();
   };
 
@@ -141,7 +142,7 @@ const Notes = () => {
       {notes && notes.length > 0 ? (
         notes.map((note, index) => (
           <div key={index} className="card my-3 shadow-sm row">
-            <NoteItem updateNote={updateNote} note={note} index={index} />
+            <NoteItem updateNote={updateNote} showAlert={props.showAlert} note={note} index={index} />
           </div>
         ))
       ) : (
