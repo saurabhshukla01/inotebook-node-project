@@ -14,16 +14,19 @@ router.post('/create-user', [
     body('email','Enter a valid email').isEmail(),
     body('password','Password must be at least 5 characters').isLength({min:5}),
 ] , async (req,res) => {
+    let success = false;
     // if there are errors, return Bad request and the errors
     const errors = validationResult(req); 
     if(!errors.isEmpty()){
-        return res.status(400).json({ errors:errors.array() });
+        success = false;
+        return res.status(400).json({ success , errors:errors.array() });
     }
     // check weather the user with this email exists already
     try{
         let user = await User.findOne({email:req.body.email})  // its promise so use await to resolve the value or output
         if(user){
-            return res.status(400).json({error:"Sorry a user with this email already exists."})
+            success = false;
+            return res.status(400).json({success , error:"Sorry a user with this email already exists."})
         }
         // creating salt using function to secure the password ..
         const salt = await bcrypt.genSalt(10);
@@ -41,8 +44,8 @@ router.post('/create-user', [
             }
         }
         const authToken = jwt.sign(data,JWT_SECRET);  // this is sync method not call to async Or await function 
-        // console.log(authToken);
-        res.json({authToken});  // after user create send auth token in api while create user successfully.
+        success= true;
+        res.json({success,authToken});  // after user create send auth token in api while create user successfully.
         // catch errors
     }catch (error) {
         console.error(error.message);
@@ -55,22 +58,26 @@ router.post('/login', [
     body('email','Enter a valid email').isEmail(),
     body("password","Password can't be blank").exists(),  // password exits or not to check this function
 ] , async (req,res) => {
+    let success = false;
     // if there are errors, return Bad request and the errors
     const errors = validationResult(req); 
     if(!errors.isEmpty()){
-        return res.status(400).json({ errors:errors.array() });
+        success = false;
+        return res.status(400).json({ success,errors:errors.array() });
     }
     // destructure the variables using body get value 
     const {email,password} = req.body;
     try{
         let user = await User.findOne({email})  // its promise so use await to resolve the value or output
         if(!user){
-            return res.status(400).json({error:"Please try to login with correct Credentials."})
+            success = false;
+            return res.status(400).json({success,error:"Please try to login with correct Credentials."})
         }
         // this is compare both password user by enter & match with database user password while fetch from email which user want to login.
         const passwordCompare = await bcrypt.compare(password,user.password);  // this is async function need to call await to solve all promise
         if(!passwordCompare){
-            return res.status(400).json({error:"Please try to login with correct Credentials."})
+            success=false;
+            return res.status(400).json({success,error:"Please try to login with correct Credentials."})
         }
         // if matched password with email if db has users then logged in with the response
         const data = {
@@ -78,8 +85,9 @@ router.post('/login', [
                 id : user.id
             }
         }
+        success=true;
         const authToken = jwt.sign(data,JWT_SECRET);  // this is sync method not call to async Or await function 
-        res.json({authToken});  // after user logged in send auth token in api.
+        res.json({success,authToken});  // after user logged in send auth token in api.
     // catch errors
     }catch (error) {
         console.error(error.message);
@@ -91,11 +99,13 @@ router.post('/login', [
 router.post('/get-user', 
     fetchUser,
     async (req,res) => {
+        let success = false;
         try{
             userId = req.user.id;
             const user = await User.findById(userId).select("-password");    // "-password"  means ignore password fetch all fields
+            success=true;
             // send user response in api while get correct header "auth-token"
-            res.send(user);
+            res.send(success,user);
         // catch errors
         }catch (error) {
             console.error(error.message);

@@ -31,7 +31,7 @@ router.post('/create-notes',
     async (req,res) => {
         try{
             // destructure the variable based on req body 
-            const {title , description , tag} = req.body;
+            const {title , description , tag } = req.body;
             // if there are errors, return Bad request and the errors
             const errors = validationResult(req); 
             if(!errors.isEmpty()){
@@ -89,7 +89,6 @@ router.delete('/delete-notes/:id',
         try{
             // find the note to be deleted and delete it
             let note = await Notes.findById(req.params.id)
-            console.log(note);
             if(!note){
                 res.status(404).send("Not Found");
             }

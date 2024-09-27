@@ -24,7 +24,6 @@ const Notes = () => {
     });
   };
   const handleClick = (e) => {
-    console.log("updating notes...", note);
     e.preventDefault();
     editNote(note.id, note.etitle, note.edescription, note.etag);
     refClose.current.click();
@@ -72,7 +71,7 @@ const Notes = () => {
             <div className="modal-body">
               <form className="my-3">
                 <div className="mb-3">
-                  <label htmlFor="title" className="form-label">
+                  <label htmlFor="etitle" className="form-label">
                     Title
                   </label>
                   <input
@@ -81,29 +80,13 @@ const Notes = () => {
                     id="etitle"
                     name="etitle"
                     value={note.etitle}
-                    aria-describedby="emailHelp"
                     onChange={onChange}
                     minLength={5}
                     required
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="description" className="form-label">
-                    Description
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="edescription"
-                    name="edescription"
-                    value={note.edescription}
-                    onChange={onChange}
-                    minLength={5}
-                    required
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="tag" className="form-label">
+                  <label htmlFor="etag" className="form-label">
                     Tag
                   </label>
                   <input
@@ -114,6 +97,21 @@ const Notes = () => {
                     value={note.etag}
                     onChange={onChange}
                   />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="edescription" className="form-label">
+                    Description
+                  </label>
+                  <textarea
+                    type="text"
+                    className="form-control"
+                    id="edescription"
+                    name="edescription"
+                    value={note.edescription}
+                    onChange={onChange}
+                    minLength={5}
+                    required
+                  >{note.edescription}</textarea>
                 </div>
               </form>
             </div>

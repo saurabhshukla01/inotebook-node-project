@@ -8,18 +8,17 @@ const AddNote = () => {
   const [note, setNote] = useState({
     title: "",
     description: "",
-    tag: "default",
+    tag: ""
   });
 
   const handleClick = (e) => {
-    console.log("on click function");
     e.preventDefault();
-    addNote(note.title, note.tag, note.description);
+    addNote(note.title, note.description , note.tag);
+    setNote({title: "", description: "" , tag: ""});
   };
 
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
-    console.log("on change input value");
   };
   return (
     <div>
@@ -36,19 +35,7 @@ const AddNote = () => {
             name="title"
             placeholder="Please Type Title Note ..."
             onChange={onChange}
-          />
-        </div>
-        <div className="form-group mb-4">
-          <label htmlFor="tag" className="font-weight-bold mb-2">
-            Note Tag
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="tag"
-            name="tag"
-            placeholder="Please Type Tag Note ..."
-            onChange={onChange}
+            value={note.title}
           />
         </div>
         <div className="form-group mb-4">
@@ -62,7 +49,22 @@ const AddNote = () => {
             rows="4"
             placeholder="Type your note description..."
             onChange={onChange}
+            value={note.description}
           ></textarea>
+        </div>
+        <div className="form-group mb-4">
+          <label htmlFor="tag" className="font-weight-bold mb-2">
+            Note Tag
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="tag"
+            name="tag"
+            placeholder="Please Type Tag Note ..."
+            onChange={onChange}
+            value={note.tag}
+          />
         </div>
         <div className="form-group py-3 text-center">
           <input
