@@ -7,19 +7,19 @@ const SignUp = () => {
     const [user , setUser] = useState({name:"",email:"",password:"",cpassword:""});
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const {name,email,password} = user;
         // API CALL
         const response = await fetch(`${host}/api/auth/create-user`, {
             method: "POST",
             headers: {
             "Content-Type": "application/json"
             },
-            body: JSON.stringify({ name:user.name, email:user.email, password:user.password , cpassword:user.cpassword}),
+            body: JSON.stringify({ name,email,password}),
         });
         const json = await response.json();
         console.log(json);
         if(json.success){
-            // save the authToken & redirect 
-            localStorage.setItem('token',json.authToken);
+            // save the user data in user table and redirect to home page 
             navigate('/');
         }else{
             alert("invalid credentials !!!");
@@ -53,7 +53,7 @@ const SignUp = () => {
             Password
           </label>
           <div className="col-sm-10">
-            <input type="password" className="form-control" id="password" name="password" value={user.password} onChange={onChange} />
+            <input type="password" className="form-control" id="password" name="password" value={user.password} minLength={5} onChange={onChange} />
           </div>
         </div>
         <div className="row mb-3">
@@ -61,7 +61,7 @@ const SignUp = () => {
             Confirm Password
           </label>
           <div className="col-sm-10">
-            <input type="password" className="form-control" id="cpassword" name="cpassword" value={user.cpassword} onChange={onChange} />
+            <input type="password" className="form-control" id="cpassword" name="cpassword" value={user.cpassword} minLength={5} onChange={onChange} />
           </div>
         </div>
         <button type="submit" className="btn btn-primary">
