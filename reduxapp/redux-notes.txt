@@ -16,7 +16,11 @@ not working redux getting some issue   >>>>
 # npm install redux@4 redux-devtools-extension redux-thunk
 
 youtube link :  https://www.youtube.com/watch?v=UX6Kf48qCvs&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=78
-git hub link :  
+git hub link :  https://github.com/saurabhshukla01/inotebook-node-project/tree/main/reduxapp
+
+please check and update code in git hub & youtube link etc.
+
+
 
 
 
