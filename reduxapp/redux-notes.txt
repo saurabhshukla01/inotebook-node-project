@@ -1,0 +1,8 @@
+##### first install react app 
+# npm create-react-app reduxapp
+
+##### doing setup react app 
+##### now install redux , react-redux & redux-thunk
+# npm i redux react-redux redux-thunk
+
+##### 
