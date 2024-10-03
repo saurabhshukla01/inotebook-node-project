@@ -1,1 +1,1 @@
-export * as actionCreators from './action-creators/index';
+export {depositMoney,withdrawMoney} from './action-creators/index';

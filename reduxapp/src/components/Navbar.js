@@ -1,5 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
 const Navbar = () => {
+  const amount = useSelector((state) => state.amount); // state.amount should give you the correct amount
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" href="/">
@@ -32,7 +34,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="mx-2 p-0">
-        <button disabled={true} className="btn btn-primary btn-lg float-right">Your Balance : Rs. 10,000</button>
+        <button disabled={true} className="btn btn-primary btn-lg float-right">Your Balance : Rs. {amount}</button>
       </div>
     </nav>
   );

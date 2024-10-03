@@ -5,4 +5,20 @@
 ##### now install redux , react-redux & redux-thunk
 # npm i redux react-redux redux-thunk
 
-##### 
+##### install new lib redux devtool ext >>>
+# npm install redux-devtools-extension
+if is it not working then >>>
+# npm install redux-devtools-extension --force
+
+
+not working redux getting some issue   >>>>
+
+# npm install redux@4 redux-devtools-extension redux-thunk
+
+youtube link :  https://www.youtube.com/watch?v=UX6Kf48qCvs&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=78
+git hub link :  
+
+
+
+
+

@@ -1,11 +1,14 @@
 import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension"; // For Redux DevTools integration
-import thunk from "redux-thunk"; // If you want to use middleware like redux-thunk
-import reducers from "./reducers";
+import {thunk} from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension"; // Correct import for devtools extension
+import amountReducer from "./reducers/amountReducer";
 
-// Create the store with middleware and devtools
-export const store = createStore(
-  reducers,
-  {},
-  composeWithDevTools(applyMiddleware(thunk)) // Applying middleware and DevTools
+// Use composeWithDevTools if available, otherwise fallback to regular applyMiddleware
+const composeEnhancers = composeWithDevTools || applyMiddleware;
+
+const store = createStore(
+  amountReducer,
+  composeEnhancers(applyMiddleware(thunk))
 );
+
+export default store;
