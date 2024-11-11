@@ -199,6 +199,87 @@ MobaXterm  download
 Open MobaXterm Software  >>>>   Click on SSH  >>>>  
 Remote Host fill static IP which     &&   username    &&   port
  
+Click on Advance SSH settings
+ 
+Select .pem file and get OK .
+Its working with SSH key based on Advance SSH settings tab its connect.
+In check box use Private key   >>>  select file and OK
+Ok >>  Accept  done ...
+its working to connect Ubuntu@ip-like any one 
+Now you can run command inside this ..
+# sudo apt-get update
+Goto search bar to quick next Icon you can click   >>>> Click on Cloud shell   >>> close 
+Goto Actions Download file 
+upload file you can upload your key file and connect.
+>>>>   cloudshell-userip-10-6-35-233  ~    >>>  You can run command easy to use their.
+
+Next Step for connect way next   >>>>
+Goto to SSH client tab  ...
+ 
+Now you need to download ( gitbash ) for windows.
+Git bash   download  >>> windows   >>>  64 bit Git for windows Setup
+Goto SSH client   >>>  copy to ssh -i key  inside this Screen.
+Goto show more options  >>> right click  >>> Goto GitBash need to be opened here  >>>
+Open one cmd command page  >>> paste link which one copy SSH client key.
+# ssh -i "ctb-NV.pem"  ubuntu@ec2-54-167-110-143.compute-1.amazonaws.com
+after this complete link and enter .
+enter  >>>   Yes
+connect your git bash with ubuntu  
+enter  >>>   sudo apt-get update
+
+How to Create and Connect Windows Server in AWS   >>>>
+Launch EC2 Instance for windows server ...
+After loggin AWS account   >>>  Search EC2 instance  ( Elastic computed cloud )  >>>  click >>>  Launch Instance 
+Set name    >>>  window-ec2
+Select Quick Start   >>>  windows   
+select Instance type    >>>   t2-micro
+key pair ( login )  >>>  you can choose any one you are already download.
+Select Security group  >>>  choose exists ( which one you created before )  Select default Security group.
+Configure storage ( info )   >>>   min you keep 30 GiB  gp2 Root Volume ( Not encrypted )
+>>>>  Click on Launch Instance 
+When Instance is created  then select & Goto connect button
+Session manager & EC2 serial console is not available then you can go with only one option 
+RDP Client     ( Remote desktop connection protocol )   in window you can search on desktop rdp   >>>   
+Steps to connect   >>>>
+RDP Client     >>>  Download Remote desktop file  >>>  file download need to open >>> connect   >>>  password   >>>  if you not know what is password then You click on Get Password  >>>   upload private key file   >>>  NV.pem file   >>>  Click on decrypt password 
+Now you show the password like this Screen Shot 
+ 
+Window Security get username & password its connected to easy.
+now connected then RDP is working ( Remote desktop collection )
+You can use this steps for windows server connected.
+ 
+when you connect server in window Secuirty Enter the username & password based on SSH key 
+after fill values >>>  OK  >>> this connection is not working 
+ 
+because you are logged more than one PC to account in same time , so its failed.
+When you are used then do terminate EC2 instance.
+ 
+Goto Instance State and select terminate instance   >>>  terminate
+its automatically terminate instance.
+
+How to Copy EC2 from one region to another using AMI    >>>>
+
+  
+
+
+
+
+
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
