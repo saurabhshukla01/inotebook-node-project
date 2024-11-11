@@ -1,0 +1,268 @@
+				AWS Notes : 
+Module 1  >>>
+Introduction to cloud computing  >>>
+Internet : A Global computer network using standardized communcation protocol ( eg. UDP , TCP / IP ) . providing information and communication facicaties consising of inter connected networks.
+Intranet : Intranet is a local private network created using world wide web.  ( if you want chat with guys in our private network so its works if not use outside network its not working ).
+
+Virtualization : Virtualization is primary technology that support cloud computing. 
+	A service that return from Virtualization which is software that modifies hardware is referred to ad cloud computing . Virtualization  is necessary for colud computing to exists.
+
+Delpoyment & Service Models  >>>
+Laas ( Infrasturcture as a service ) :   AWS , Reckspace , MS Azure etc.
+Paas ( Plateform as a service ) :   AWS Elastic BeanStalk , Herokcy etc.
+Saas ( Software as a service ) :   Google drive , Google docs , MS office 365 etc.
+
+Cloud Deployment Models : 
+> Public Cloud  :  AWS , Google Platefrom , MS Azure etc.
+> Private Cloud  :  HPE , VMware , RedHat , OpenStack etc.
+> Hybrid Cloud  : 
+On-site        		Laas         		 Paas     		Saas
+Application		Application		Application 		Application
+Data			Data			Data			Data
+Runtime		Runtime		Runtime		Runtime
+Middleware 		Middleware 		Middleware 		Middleware 
+O/s			O/s			O/s			O/s
+Virtualization 		Virtualization 		Virtualization 		Virtualization 	
+Servers			Servers			Servers			Servers
+Strorage		Strorage		Strorage		Strorage
+Networking		Networking		Networking		Networking
+
+Which is red then its manage by third party  & other black then manage by you .
+
+AWS Suite  >>>>
+ 
+
+Entair sturcture with real website uses examples  >>>
+
+ 
+
+Basic Diff Azure & AWS & GCP Services  >>>>
+
+ 
+
+Microsoft Azure  >>>   Initially called Azure , was launched in 2010 with the intent to provide competent cloud computing plateform for businesses.
+
+AWS >>>  Amazon web services Is a subsudlary of amazon.com which provides an on demand Cloud Computing plateform to individuals , companies and goverment on a paid subsription basis.
+
+GCP  >>>  ­­­­­­Google Cloud Plateform which is offered by Google is a suite of cloud computing services that runs on the same infrasturcture that Google uses internally for its end user products such as Google search engine.
+
+Availability Zone  for Microsoft Azure , AWS or GCP  >>>>
+AWS has 66 Availability zones with 12 more on the way.
+Azure has 54 regions worldwide and is available in 140 countries all around the world.
+Google Cloud Plateform has been made available in 20 regions arround the world with 3 more on their way.
+
+ 
+ 
+
+Who uses them ?
+1) Since AWS is the oldest player in the cloud market , it comparatively has bigger comparatively had bigger community supportand user base. Therefore , AWS has more high-profile and well-known customers like Netflix , Airbnb , Unilever , BMW , Samsung , MI , Zynga , etc.
+2) Azure is also gaining its share of high-profile customers with time as of now , Azure has almost 80 percent of Fortune 500 companies as its customers . Some of its major customers are Johnson Controls , polycom , Fujifilm , HP , Honeywell , Apple etc.
+3) Google , on the other hand , shares the same infrastructure as that of Google Search and YouTube and as a result , many high-end companies have put their faith in Google Cloud , Major clients of Google Cloud are HBSC , Paypal , 20th CenturyFox , Bloomberg , Domaios , and more.
+ 
+Module 2  >>>
+EC2  >>>>
+Amazon Elastic compute cloud ( Amazon EC2 ) is a computing capacity that is scalable in the Amazon web service ( AWS Cloud ) . Using Amazon EC2 eliminates the need to invest in hardware upfront , allowing you to devlop and deploy applications more quickly.
+Features  >>> 
+Instances are virtual Computing enviroments .
+Amazon Machine Images ( AMI ) are preconfigured templates for your instances that package the bits you need for your Server ( Including the operating system and additional software ).
+Instance types are different configurations of CPU , memory storage and networking capacity for your instances.
+Using key pairs , you can secure login information for your instances ( AWS stores the public key and you store the private key in a secure place ) .
+
+Meaning of Elasticity   >>>>
+ 
+when people is increase then EC2 instance increase the server so your site in not hang or website . if people is decrease then EC2 instance decrease  the server or site in not hang or website same. 
+Every server add or remove based on count no of people in your server its works based on load balancer thourgh manage server.
+
+Instance Type  >>>>
+The Instance type determine the hardware of the underlying host computer on which EC2 instance are launched.
+
+How many Types of Storage  >>>
+	>>>  General Purpare    ( T2 , M5 , M4 , M3 )
+	>>>  Memory Optimized  ( X1e , X1 , R4 , R3)
+	>>>  Storage Optimized   ( H1 , 13 , D2 )
+	>>>  Compute Optimized   ( P3 , P2  , G3 , F1)
+	>>>  Acceterated Computity  ( C5 , C4 , C3 )
+
+AMI ( Amazon machine Image )  >>>
+It Contains the information required to launch on instance.
+Operating System 
+Architecture
+Storage or root device 
+Virtualization type ( HVM  or PV )
+
+What is Public IP  ?  
+⦁	It is not associated with AWS account.
+⦁	No charges for the public IP , even if it is not being used white the instance in running.
+⦁	When ever the instanced is re-launched the public IP changes.
+Static IP is not same IP when its created or applied its automatically changed .....
+
+Elastic IP  >>>
+⦁	It is associated with AWS account.
+⦁	changes will be applied either ip is being  used or not.
+⦁	This Elastic IP is the same and static for every launch until we manually release it.
+Elastic IP is same IP when its created or applied .....
+
+Elastic Network Interface  >>>
+A network interface is interface between a computer and an internet network .
+The Network IO (input or Output ) happens through network interface cards.
+
+Network Interface Contain  >>>
+⦁	Elastic IP
+⦁	Public IP
+⦁	Private IP
+⦁	Security Groups.
+
+ 
+Like this type is Network Contains.
+
+How to create EC2 instance and connect in AWS   >>>>
+ 
+
+Steps  >>>
+create account in AWS .
+Step 1 :  
+Select Root User options  >> Root user email address need to be filled   >> press Next button  >>  Password Enter   >> if you use MFA ( multi factor authentication ) for Secuirty purpose   MFA Code Enter to check Email  and Entered 
+
+Send to next screen ...
+ 
+Click on EC2  >>>
+ 
+Click on Instance ( running )  >>>
+Search EC2 Instance 
+Click on Launch Instance
+ 
+its opened this page ..
+Steps  >>>
+1 ) fil the name like that ...
+module2-ec2
+fill the Application and OS Images ( Amazon Machine Image ) 
+2) Select any options like ( windows , Ubuntu )
+ 
+Select this for free tier eligible ..
+3 ) Now Select Instance Type
+t2.micro   ( its free tier )
+4) key pair ( login ) for the security purpose.
+If i have not key then click on Create new key pair 
+one time create and use this key & value pair every where.
+ 
+after fill the form key value created successfully now we can use every where.
+after create key pair and download file and check path where you store.
+
+5) Network Settings  >>>
+VPC ( virtual private cloud )   like Ex.   ( In hotel every person got private room ) its called VPC.
+click on Edit button   
+Firewall Security Groups   ( choose one option )
+1) Create Security group     2) Select existing security group
+>>> 
+if you select Create Security group  then need to allow some options 
+# Allow SSH traffic from 
+# Allow HTTPS traffic from the internet 
+# Allow HTTP traffic  from the internet
+
+>>>
+configure storage  ( info )
+8 GIB  gp2 Root Volume  ( Not encrypted )
+After doing all verify the summary in AWS account.
+Click on Launch Instance its is created easy way.
+now you can check connect with EC2 Instance .
+
+ 
+Doing connect its direct connect.
+
+If you choose Select existing security group  then need to allow some options 
+Select existing security group   >>>  common security groups info  ( default VPC  )
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+If your instance is connected then we can run command in ubuntu in your server.
+# sudo apt-get update
+
+How to connect EC2 using PuTTY, MobaXterm, gitbash, direct etc in AWS   >>>>>>>
+Instances  >>
+	select instance name & launch & connect   , So its is running.
+
+ 
+Press to connect button . its direct connect.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Download putty first 
+# putty   &  puttygen
+two software needed to install ..
+>>>>   putty open   >>>>  Putty Key Generator    >>>>  click on load button  >>>>
+select .pem file   >>>>   PuTTYgen Gives warning  >>>>   Yes   >>>>  Save Private  key   >>>>  
+rename file name  like abc.ppk file .
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Open Putty  Software   
+>>>>  SSH     >>>>  AUTH    >>>>  Credentionals   >>>>  Browse    ( Select file )  >>>>  Login  >>>>
+run command    (   #  sudo apt-get update )
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MobaXterm  download   
+Open MobaXterm Software  >>>>   Click on SSH  >>>>  
+Remote Host fill static IP which     &&   username    &&   port
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+

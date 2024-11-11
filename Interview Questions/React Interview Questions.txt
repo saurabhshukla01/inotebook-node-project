@@ -1,0 +1,469 @@
+1. Define React JS.
+React JS is a free and open-source javascript library.
+
+Also Read: What is React JS
+
+2. What are the features of React JS?
+JSX, virtual DOM, data binding, and components are the features of React js.
+
+3. Explain the features of React JS.
+JSX: Javascript syntax extension is used to describe the look of the user interface.
+
+Virtual DOM: It stands for Virtual Document Object Model. It is a structured presentation of HTML elements.
+
+Data Binding: React JS has one-way data binding which makes everything fast.
+
+Components: The building blocks of React js are called components. 
+
+4. Why is React JS preferred?
+By using React JS, we can form dynamic applications easily. It offers better performance and the components are reusable. It is a dedicated library and has a unidirectional data flow.
+
+5. What makes React unique from other frameworks?
+It uses virtual DOM, which can make work faster and smoother. Apart from this, it is efficient and easy to use. 
+
+6. What are props in React JS?
+Props is a short form for properties. They are read-only property components and are carried from parent-to-child components throughout the software.
+
+7. What are the types of components in React JS?
+There are two main types of components in React JS: a functional component and a class component.
+
+8. What are refs in React used for?
+Refs are a React function used for accessing DOM to change the value of the child component without using any other tool.
+
+9. What is Flux in React?
+An architectural pattern that ensures the one-way flow of data is called flux. It manages derived data so that multiple components can interact with it. 
+
+10. What is Redux Thunk?
+A middleware in React that enables users to create actions that return a function in exchange for an action.
+
+11. What is the function of Redux?
+Redux ensures that the React component functions follow the React design principles.
+
+12. What is Virtual DOM?
+Virtual DOM is a virtual version of a programming concept and works in sync with the real DOM.
+
+13. What are Hooks?
+Hooks are a newly launched function in React used to utilize state and other capabilities. It allows the isolation of stateful logic from a component.
+
+14. Is JSX readable by web browsers?
+Web browsers cannot read JSX as they are built to read only regular Javascript objects. For web browsers to read JSX, the file needs to be converted into a regular Javascript object.
+
+15. What is Babel?
+It is a Javascript interpreter which transforms the JSX into a regular javascript object that can be understood by web browsers. 
+
+React JS Interview Questions for Freshers
+Here are some commonly asked React JS interview questions and answers for freshers:
+
+16. Does React use HTML?
+No, React does not use HTML. Instead, it uses JSX, which is quite similar to HTML.
+
+17. What is the difference between Real DOM and Virtual DOM?
+Real DOM	Virtual DOM
+The updates are very slow.	The updates are fast.
+It consumes a lot of memory.	The consumption of memory is less. 
+It allows direct updates from HTML.	It cannot get direct updates from the HTML.
+18. Explain Flux Concept.
+Flux is a new kind of architecture used for developing client-side applications. It complements React and the one-way data flow concept.
+
+19. What are the advantages of React JS?
+It is time-saving.
+It allows faster development.
+It is easier to understand and work with.
+It allows users to use third-party libraries.
+It has code stability.
+20. Does React use any animation package?
+Yes, the two popular animation packages used by React are React Motion and React Transition Group.
+
+21. Name the lifecycle steps in React JS.
+Following are the steps of React JS lifecycle:
+
+Initialization
+Mounting
+Updating
+Unmounting
+22. What are pure components in React JS?
+Pure components can replace any component with only the help of render. It helps enhance the simplicity of the code and the performance of the application.
+
+23. Explain React State.
+The React components have an in-built state object. It helps decide how a specific component renders and behaves.
+
+Also Read: React Projects
+
+24. What is the super keyword in React used for?
+The super keyword in React helps you access functions on an object’s parent.
+
+25. What is a high-order component in React?
+It is an advanced technique for reusing component logic. It emerges from the React compositional nature.
+
+26. What is a React Router?
+It is a routing library that allows the user to add new screen flows to the application. It keeps the URL in sync with what is being displayed on the screen.
+
+27. Explain Jest.
+Jest is a javascript unit testing created by Meta. It is based on Jasmine and offers automated creation. It is also used as a testing component.
+
+28. Explain dispatcher.
+It is a central hub of apps where the users receive actions and broadcast payload.
+
+29. Explain Store.
+This feature allows you to save the application’s entire state in one place. All that is saved gets directly updated from the Store.
+
+30. Explain callback function.
+The callback function comes into play when setState has finished and the components have been re-rendered.
+
+31. What is the Presentational segment?
+This segment allows the user to render the HTML.
+
+32. Explain synthetic events in React JS.
+The synthetic event acts as a cross-browser wrapper around the browser’s native event. It helps combine the behavior of various browsers.
+
+33. Explain the information that controls segments in React JS.
+There are two sorts of information that control a segment:
+
+State: It will change and will be utilized for State.
+Props: They are set by a parent component and settle for a long period of time.
+34. What are error boundaries?
+The error boundaries help the user to identify any JavaScript error in the child components. It is mainly used to log the error and to show a fallback UI.
+
+35. What is the strict mode?
+This feature runs checks and warnings in the React components. It helps highlight the issues without rendering the visible UI.
+
+36. What is a webpack?
+It is a module builder that mainly runs during the development process.
+
+37. What is the reduction in React JS?
+Reduction is used to handle State in React JS.
+
+38. Explain reconciliation.
+When the state or props of a component change, the rest is compared to the rendered element with the previously rendered DOM. The actual DOM is updated if required. This method is called reconciliation.
+
+39. Can props be updated in React JS?
+The props cannot be updated in React JS as they are read-only functions.
+
+40. What is mounting and demounting in React JS?
+When the elements are attached to the DCOM, the process is known as mounting.
+When the elements are detached from the DCOM, the process is known as demounting.
+You can opt for a React JS course to get a better understanding of React JS.
+
+React JS Interview Questions and Answers for Intermediates
+If you are looking for React interview questions and answers for the intermediate level, the listed questions will help you along the way. 
+
+41. How are elements created in React?
+To create elements in React, one must use loops that display a dynamic set of components based on an object or array. The user must be able to explain what a v-for directive is used for along with the other applications. Let us understand the same with an example.
+
+The following code displays how the random array is used to generate a set of RandomComponent:
+
+<div>
+
+            {random.map(random  =>
+
+            <RandomComponent    key={random.id}   random={random}/>
+
+             )}
+
+             </div>
+
+42. How is the state object updated in React?
+The setState function is used to update the state object. It merges the new object with the current state. Later the updated state allows a component to rerender and ensures that the views are always synced and up to date.
+
+The following example explains how the setState function works:
+
+class Profile extends React.Component
+
+constructor ( )   {
+
+            super ( ) ;
+
+            this.state = {
+
+            name: ‘Ryan’
+
+            };
+
+           }
+
+          updateName ( )  {
+
+          this.setState({
+
+          name: ‘Steve’
+
+         });
+
+       }
+
+          render ( ) {
+
+          return  (
+
+          <div>
+
+          <h1>{this.state.name}</h1>
+
+          </div>
+
+       );
+
+     }
+
+    }
+
+43. Explain Higher Order Components.
+It is a pattern driven by React’s compositional nature. Its work is to accept a component and return a new component. These components are referred to as pure components. They accept any dynamic child component but do not modify any of the child’s components.
+
+Following are the uses of HOCs:
+
+Logic abstraction and reusable code
+Manipulation and abstraction of State
+Manipulation of Props
+Render hijacking
+43. Explain the purpose of the useMemo hook.
+UseMemo hook is used by the functional components to memorize the expensive functions. These functions are in use only when the input changes.
+
+45. Explain Render Props.
+It is the technique of sharing code between components by passing a function as a component’s props. This function is used to compose new components by using the passed-on components. The user must have a basic knowledge of render props and its uses. 
+
+The following code explains how a function is passed as a prop to any component:
+
+<any component render={data => (
+
+   <h1> Any Text {data.target}</h1>
+
+)}/>
+
+46. What are keys in React used for?
+The keys in React are used to identify unique virtual DOM elements. It helps optimize the rendering by recycling all the existing elements in the DOM. It also leads to increased and better performance of the application.
+
+Also Read: Best React Developer Tools
+
+47. What were the drawbacks of the MVC framework?
+Enlisted below were the drawbacks of MVC framework:
+
+Manipulation of DOM was very expensive.
+The applications were inefficient and slow.
+It is a huge memory waste.
+It has a complicated model because of circular dependencies.
+48. What is Flux?
+It is an architectural pattern that enforces unidirectional data flow. Its main function is to control the derived data so that the multiple components can interact with each other. 
+
+49. What is Redux?
+Redux is one of the libraries of front-end development. It is a state container for javascript applications used for the entire application state management. 
+
+50. What is the difference between Flux and Redux? 
+Flux	Redux
+The store in flux has state and change logic.	Both the state and change logic are separate.
+It has multiple stores.	It has only one store.
+All the stores are disconnected and flat.	There is a single store with hierarchical reducers.
+It has a singleton dispatcher. 	There is no concept of a dispatcher.
+The state is mutable.	The state is immutable.
+React JS Interview Questions for Experienced Professionals
+Following are some of the React advanced interview questions that may be helpful for senior developers:
+
+51. Explain portals in React.
+Portal is a function that renders children components into DOM that exists outside the DOM hierarchy of parent components. It is a convenient way to render components and is ideal to use for the elements that require escaping the DOM default hierarchy.
+
+52. Explain error boundaries in React.
+The component that detects javascript errors anywhere in the child component tree is known as error boundaries. It helps to log these errors and display the fallback UI instead of crashing the entire component. 
+
+The following example shows an Error Boundary component that displays a fallback h1 and logs the error.
+
+class ErrorBoundary extends React.Component {
+
+  constructor(props) {
+
+    super(props);
+
+    this.state = { hasError: false };
+
+  }
+
+  static getDerivedStateFromError(error) {
+
+    return { hasError: true };
+
+  }
+
+  componentDidCatch(error, errorInfo) {
+
+    console.log(error, errorInfo);
+
+  }
+
+  render() {
+
+    if (this.state.hasError) {
+
+      // fallback UI
+
+      return <h1>Something is wrong.</h1>;
+
+    }
+
+    return this.props.children; 
+
+  }
+
+}
+
+The component can then be used to detect all the errors in the child component.
+
+<ErrorBoundary>
+
+    <child />
+
+</ErrorBoundary>
+
+53. Explain React Profiler and its uses.
+The cost of rendering a React application is measured by React profiler. It helps the developer identify the parts of the application that require assistance and are slow. It can be added anywhere in the component to measure the rendering cost. 
+
+The code below explains how the profiler component measures the rendering cost of the navigation component:
+
+render(
+
+  <App>
+
+    <Profiler id=”Navigation” onRender={callback}>
+
+      <Navigation {…props} />
+
+    </Profiler>
+
+    <Main {…props} />
+
+  </App>
+
+)
+
+54. Explain StrictMode in React.
+This tool helps highlight any potential problems in an application. It is used as a component but does not create any visible UI in the DOM. One can enable strict mode for the application by wrapping the components in  React.StrictMode.
+
+The code below shows the working of strict mode:
+
+import React from ‘React’;
+
+function Application() {
+
+  return (
+
+    <div>
+
+      <Header />
+
+      <React.StrictMode>
+
+        <div>
+
+          <Content />
+
+        </div>
+
+      </React.StrictMode>
+
+    </div>
+
+  );
+
+}
+
+Also Read: React Native Interview Questions
+
+55. What are React Fragments?
+React fragments are features that create a group of child components without actually creating a different node. It allows the user to return multiple components directly without any additional wrapping. They are denoted by an open empty tag <> and a closed empty tag </>.
+
+The code below shows the working of React fragments:
+
+function Columns() {
+
+  return (
+
+    <>
+
+      <td>Column A</td>
+
+      <td>Column B</td>
+
+    </>
+
+  );
+
+}
+
+React Advanced Interview Questions
+Here is a list of some more React advanced interview questions.
+
+56. How to modularize code in React?
+You can modularize code in React by dividing it into reusable components that have specific functionalities. It makes debugging and updating simpler while also paving the way for scalability in future development efforts.
+
+57. Explain React Router in detail.
+React router is a tool for managing routing in web applications. It permits switching between various parts without requiring a page reload. Declarative routing is offered, enabling programmers to define routes as components and render them according to the current URL. Numerous routing features, including nested routes, route parameters, query parameters, and redirects are supported by React router. It combines seamlessly with React, making it simple to create SPAs with many views and dynamic routing.
+
+58. Explain data flow in a React-Redux application.
+React-Redux applications follow a strict unidirectional data flow pattern that relies on triggered actions and ensues state updates via the Redux store. Any connected components receive the latest updated state as propagated by these modifications.
+
+59. Difference between React Context and Redux.
+React incorporates its own feature called React Context, which enables data to be passed among components without explicitly utilizing props. Redux is a standalone library used primarily for state management that comprises additional tools, like middleware and a global store.
+
+60. How are decorators used in React?
+React presents decorators as an effective way of optimizing components by providing additional functionality. By adding a decorator before component declaration using “@”, developers can streamline their code organization and achieve clarity in their implementation.
+
+61. How is testing in React applications handled?
+React applications can undergo rigorous testing by leveraging specialized frameworks such as Jest and Enzyme. Developing teams benefit from the convenient suite of utilities provided by these frameworks, which include powerful simulation capabilities for any component interaction.
+
+62. Explain different ways to pass data between components in React.
+React furnishes front-end developers with several techniques for communicating data between different elements or portions of a web application. Among these approaches are props that facilitate the passage of information from parent elements into their children counterparts; callbacks that enable children components to send info up the hierarchy chain; context that depends on the ancestral relationships between different components; and Redux store offering access to global state.
+
+63. Explain Redux in detail.
+Redux helps facilitate the development process by providing predictable handling of state changes. Incorporating this popular tool with React allows for efficient management of an application’s centralized store by means of dispatched actions and reducers.
+
+64. How is React Router different from Conventional Router?
+React Router serves as a distinctive resource for single-page applications developed with React. It uses components in defining routes, which sets it apart from conventional routers that depend mainly on URLs to handle routing tasks in server-side apps.
+
+65. How is data passed on from the child to the parent component?
+In React, transmitting data from a child instance to its overseeing parent comprises invoking a pre-existing callback function. The stated function is delivered through the passing of props by the parent component and necessitates having the subject data handed over as arguments during implementation.
+
+66. Explain the difference between setState and replaceState methods.
+Managing component states in React involves selecting between two methods: “setState” and “replaceState”. When updating a current object in State, developers generally use “setState.” However, when creating an entirely fresh profile from scratch is required instead of just amending small details of one already present, then “replaceState” is used.
+
+67. How is the state with values that depend on the current state updated?
+React’s `setState` method allows developers to alter component states efficiently. Moreover, these changes can be made in conjunction with a callback utilizing current and previous state data so that updates rely on this information.
+
+68. How is the component re-rendered without calling setState?
+To initiate a re-render of the component, it is not necessary to invoke the `setState` method. Instead one can simply update the props passed to the component from its parent. This will trigger a re-render based on the new prop values.
+
+69. How does a user set key names in the state object?
+The names of importance within the state object are determined by the properties assigned by users during the initialization of a component’s state or when they modify its state with `setState` later.
+
+70. Explain the purpose of the useEffect hook.
+React’s useEffect is a versatile hook that makes it possible to execute side effects in functional components. With this hook, data fetching and event subscription are made simple. It runs after each render. 
+
+71. Explain the purpose of the useRefs hook.
+The useRef hook proves invaluable in providing a changeable value that endures across multiple components renders. Its functionality is often utilized by developers to obtain or maintain references to DOM elements, while also holding onto non-static values that don’t induce re-renders.
+
+72. Is static typing possible in React Hook? Explain your answer.
+Yes, static typing is possible in React Hooks using TypeScript. TypeScript provides type annotations and inference for React components and hooks, helping catch type errors during development.
+
+73. Explain how to build a custom hook.
+In React, crafting custom hooks involves taking reusable code and converting it into a function with a “use” prefix. These hooks have the capability of using other hooks and can be utilized in numerous components to furnish distinct functionalities.
+
+74. Explain pure components.
+React has pure components that solely re-render when their props or state undergo changes. They do this to dodge unnecessary re-renders and check for alterations to the props and state.
+
+75. Explain the method to re-render the view when the viewport size changes.
+To re-render the view when the viewport size changes, do the following:
+
+Look for the “resize” event on the window object.
+In the event handler, update the necessary variables or state related to the view.
+Trigger a re-render of the view using the updated variables or state.
+76. List the advantages of Redux.
+The advantages of Redux include centralized state management, predictable state updates, improved debugging with time-traveling, middleware for handling side effects, and support for hot-reloading.
+
+77. Why is Router required in React?
+To enable navigation between various views or components, React uses a router. This enables a multi-page experience within a single-page application by basing the switching process on the current URL.
+
+78. Explain stateless components.
+React’s stateless components, also called functional ones, they do not have an internal state and are defined solely as regular functions. They depend on input data from props, and their role is focused on rendering tasks.
+
+79. How do you handle forms in React?
+React allows for forms to be managed through controlled components, wherein form inputs are linked to state variables and modified via event handlers. Alternatively, libraries, such as Formik can be employed for streamlined form management that incorporates advanced functionality, such as validation and form submission.
+
+80. Explain Stateful and Stateless Components.
+Stateful components manage their own internal states which can be altered via setState(). Stateless components don’t have any inherent states but instead depend entirely on the props passed in by other parts of your application.
