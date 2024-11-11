@@ -1,0 +1,47 @@
+				AWS Notes : 
+Module 3  >>>
+
+How to Copy EC2 from one region to another using AMI    >>>>
+
+First I create one EC2 instance for another region create duplicate to next region .
+check instance Name after change the region diff AWS account EC2 Instance 
+Check Instance  >>>  Actions  >>>  Image and templates  >>> create image   ( AMI amazon machine image )
+fill the details  >>>>>
+Image Name   >>>> ubuntu-AMI-NV
+Image Description   >>>>  copy AMI from the One region to another region .
+Not click on Create Image button.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+I got one AMI inside this AWS Account you can check 
+ 
+wait for few min AMI status should pending to Available like that
+update AMI name and copy AMI also ..
+When its created or Available then Goto Actions  options  >>>  Copy AMI  >>>   open this form
+ 
+Original AMI ID name  >>>   ubuntu-AMI-NV    
+Region   >>>>  Us West ( Oregon )
+And Goto Click   Copy AMI  button 
+How to check AMI is created or not  >>>  open duplicate tab
+User logged with AWS account change the region name and check AMI is created or not.
+You can check another region you got AMI it is Got Images  >>>  AMI & snapshots Got it in EC2 Dashboard tab both ..
+When AMI is created & Avialable  then you can GOTO    Launch instance from AMI  then open one form ...
+
+Open new Page Launch an instance ..
+Name & tags  >>>  oregon-ec2
+not select and AMI   
+AMI from catalog   >>>   already get AMI here.
+MY AMIs     >>>   already you are owner for the same AMI
+for verify AMI Goto AMI from catalog tab  ...
+already created name  >>>  Going down  Select Key pair name in dropdown  if you not have any key so you can create key pair for the region ...
+create key pair file 
+
+ 
+Enter Key Pair  , create .pem file and create key pair button and click and download file ...
+select file their and Launch instance its working ....
+
+
+
+ 
+
+
+
+ 
