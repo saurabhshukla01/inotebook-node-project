@@ -83,6 +83,36 @@ SC1 :  cold Storage HDD
 ⦁	Baseline performance is 12 MB/s per TB with the max of 192 MB/s per volume.
 ⦁	Burst performance 80 MB/s TB with a max of 250 MB/s per volume.
 
+EBS Snapshots  >>>
+⦁	Snapshots are used to backup data on EBS volume.
+⦁	All the snapshots is incremental backups except for the first one.
+⦁	Snapshots are copied to Amazon S3.
+ 
+New Feature  :  Data lifeCycle Manager for snapshots.
+
+Demo  >>>   EBS for ubuntu
+Demo  >>>   EBS for windows
+Demo  >>>   EBS for snapshots
+
+Demo  >>>   EBS for ubuntu   ( Step by Step ) 
+=> Launch ec2 - ubuntun ( notedown availabity zone )
+=>  go to EBS - Volume
+=>  create Volume
+=>  Goto volm - attach it with ec2
+
+=> Go to ec2  - check storage
+now we have to format it and mount
+=> connect ec2
+=> sudo apt-get update   ( command )    like this 
+
+format  ===>
+# sudo file -s /dev/xvda
+# sudo file -s /dev/xvdf
+# sudo mkts -t ext4 /dev/xvdf
+
+
+
+
 
 
 
