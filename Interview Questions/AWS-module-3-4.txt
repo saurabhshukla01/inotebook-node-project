@@ -38,6 +38,70 @@ create key pair file
 Enter Key Pair  , create .pem file and create key pair button and click and download file ...
 select file their and Launch instance its working ....
 
+How to Attach / Mount EBS Volume in Ubuntu and Windows   >>>>>>>>>>>
+EBS ( Elastic Block Storage )  >>>
+Is a amazon block-level storage service that is intended to be used exclusively with separate EC2 instances ; no two instances can have the same EBS volume attached to them. EBS provides a higher performance option for many use cases  because it is directly attached to the instance and it is used for various databases ( both relational and non relational ) as well as wide range applications such a software testing and devlopment.
+Features of EBS   >>>
+⦁	Amazon EBS persistent storage  volumes also know as Amazon EBS Volumes.
+⦁	Region and Availability zone or multiple Physical location of your resources such as instances and Amazon EBS Volume.
+⦁	Using Security groups , you can specify the protocols , ports and source IP ranges that can reach your instance.
+⦁	Elastic IP addresses are static IPr4  addresses used for dynamic cloud computing.
+
+EBS concepts  >>>
+It is the raw unformatted block-level storage ; it is exposed as raw device to the EC2 instance EBS volumes parsist independently from the life of EC2 instance.
+An EBS volume is automatically replicated with in an availability zone.
+ThoughPut  >>>  It is sequential transfer rate that an SSD or HDD will maintain continuously..
+
+IOPS  ( Input output per second  )    >>>>
+EBS volm Types  >>>  
+1) GP2 :  General purpose SSD
+2) IO1 :  Provisioned SSD
+3) ST1 : Throughpur-optimized  HDD
+4) SC1 :  Cold Storage HDD
+
+New feature :  EBS Multi Attach   >>>
+we can now enable multi-Attach on Amazon EBS Provisioned IOPS  io1 volumes to allow a single volm to be concurrently attached to up to 16 Aws Nitro System based Amazon EC2 instance in the same availability zone.
+
+EC2   <===  EBS					EC2   <===  EBS    ( multi instance implement )
+EC2   <===  EBS					EC2   <===  
+
+Before						After
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Volume Types   >>>
+GP2 :  General purpose SSD
+⦁	Baseline  performance is 3 IOPS/GB with  a min of 100 IOPS and a max of 10000 IOPS.
+⦁	Max burst performance is 3000 IOPS.
+⦁	Max throughput per volume is 160 MB/S ( 16 KB IO size ).
+IO1 :  Provisioned  SSD 
+⦁	From 100 to 32000  IOPS can be provisioned.
+⦁	Max throughput per volumn is 500 MB/s.
+ST1 :  Throughput Optimized HDD  
+⦁	Baseline performance is 40 MB/s per TB with  a max of 500 MB/s  per volume.
+⦁	Burst performance 250 MB/s TB with a max of 500 MB/s per volume.
+SC1 :  cold Storage HDD 
+⦁	Baseline performance is 12 MB/s per TB with the max of 192 MB/s per volume.
+⦁	Burst performance 80 MB/s TB with a max of 250 MB/s per volume.
+
+
+
+
+
+First you can create EC2 instance  >>>>
+Search EBS in AWS account inside dashboard ...
+Goto  Elastic Block Store   menu   >>>  Select Volumes   >>>    create volume 
+open one form  
+
+ 
+Click on Create Volume button its create volume ...
+You can check list of volume in AWS account.
+ 
+
+
+
+   
+
+
 
 
  
