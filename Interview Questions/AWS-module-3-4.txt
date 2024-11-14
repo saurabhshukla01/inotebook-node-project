@@ -23,7 +23,7 @@ And Goto Click   Copy AMI  button
 How to check AMI is created or not  >>>  open duplicate tab
 User logged with AWS account change the region name and check AMI is created or not.
 You can check another region you got AMI it is Got Images  >>>  AMI & snapshots Got it in EC2 Dashboard tab both ..
-When AMI is created & Avialable  then you can GOTO    Launch instance from AMI  then open one form ...
+When AMI is created & Available  then you can GOTO    Launch instance from AMI  then open one form ...
 
 Open new Page Launch an instance ..
 Name & tags  >>>  oregon-ec2
@@ -126,6 +126,118 @@ open one form
 Click on Create Volume button its create volume ...
 You can check list of volume in AWS account.
  
+check instance like ebs-demo
+Click on Storage tab you can check volume size is 8 GiB
+if you want to add next volume inside then you goto click on Volume Id which one you add on the same.
+Click on Volume Id then you goto Actions  >>>  Manage auto-enabled I/O
+ 
+Attach Volumn option Click you got opened next form 
+ 
+This type you can  fill volume  form and Click on Attach volume  .
+Now when you check volume you got both volume in volume list .
+now you can check instance menu >>>  click on Storage  >>> Got volume list both merge & real both exists in instance table.
+ 
+
+When we are attach EBS then its storage in raw data , so need to format first & and after some time its Attached.
+How to merged & use this EBS Storage.
+now need to connect first.
+connect Instance  >>>  EC2 Instance Connect  >>>  Copy Public IP address  
+use mobeXterm open and connect  >>>  Click on SSH  >>>  IP paste  &  username  &  port.
+use private key file and OK 
+ 
+OK  >>>  Accept  >>> Authentication via command line
+# now run command    >>>  sudo apt-get update
+# lsblk  ( list of our block )
+ 
+# sudo file -s  /dev/xvda
+ 
+
+mkfs  ( make file system )
+# sudo mkfs -t ext4 /dev/xvdf
+for make file system in AWS account.
+ 
+now we can run     # sudo file -s  /dev/xvda
+# now we can create dir via command  >>>
+# sudo mkdir ebsvolume
+# lsblk      ( this command is says block in files )
+ 
+# when need to attach storage in EBS via command.
+# sudo mount /dev/xvdf  ebsvolume
+# ls
+# lsblk
+ 
+if you got detail in drive command is  >>>
+# df -h
+ 
+# now if you want to check storage is mounted or not ?  via command 
+# lsblk   ( block list files via command )
+# unmount storage  via command 
+# sudo umount /dev/xvdf
+# now if you want to check storage is mounted or not ?  via command 
+# lsblk   ( block list files via command )
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+now we can connent steps  >>>
+connect instance for windows
+ 
+Click on RDP client  ....
+ 
+download remote file & when download need to open file software , its opened  >>>  connect  >>>  its  connect  to ask password ..
+if ask for password then click on get password  >>>  upload pv file ( private file ) >>>  Decrypt password
+set password >>>  connect   >>> RDP client  >>>  connect  >>>  set password   >>>  RDP is opened  >>>  click on Yes   >>>  you are entered desktop proto calls  
+launch EBS volumes 
+Goto to volumes list click on create volume button.
+create volume like this  ..
+ 
+create volume & check in volume list ..  & rename the volumn name its blank name.
+ 
+Select  row  >>>  Goto to Actions   >>>   Attach volumn inside this dropdown
+ 
+Select Instance which on have dropdown list .
+device name   >>>  xvdf 
+Click on Attach volume
+Goto to EC2 instance   >>>  click on particular row   >>>  inside tab Storage   >>>  check you instance is create in your instance list .
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+RDP opened  >>>  My computer  >>> Goto to any folder  >>>  
+How to check memory is in storage or not ..
+Like  >>>  in C drive   have one drive like this 
+ 
+Search option disk management
+now you can check 
+ 
+Disk 1 is offline , when i am click on right and select online and opened.
+when its online & need to allocated this memory in storage.
+Right Click on 11.GB Unallocated block  >>> New simple volumes   >>>  fill form  >>>  Click on Next .
+
+ 
+Assign any drive name ...( like A , B , C , D )
+ 
+
+next & next its complete form submit.
+now you can check your location machine & check drive name C , D.
+its process for windows EBS process or storage complete.
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 
